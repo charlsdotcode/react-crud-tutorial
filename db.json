@@ -1,0 +1,24 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@gmail.com ",
+      "phone": "091234567890"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jd@gmai.com",
+      "phone": "092345678901",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "Albert Romero",
+      "email": "ar.romero@gmail.com",
+      "phone": "093456789012",
+      "isActive": true
+    }
+  ]
+}
