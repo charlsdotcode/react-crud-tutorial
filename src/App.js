@@ -10,7 +10,7 @@ function App() {
   return (
 
     <div className="App">
-      <h1 style={{"padding":"10px"}}> ReactJS CRUD Tutorial</h1>
+      <h1 style={{"padding":"10px"}}> ReactJS CRUD Tutorial.</h1>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<EmpListing />} />
