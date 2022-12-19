@@ -1,9 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const EmpListing = () => {
 
     const [employeeData, setEmployeeData] = useState()
+
+    const navigate = useNavigate();
+
+    const editDetails = (id) => {
+
+    }
+
+    const delDetails = (id) => {
+
+    }
+
+    const loadDetails = (id) => {
+        navigate("/employee/details/"+id)
+    }
 
     useEffect(() => {
         fetch("http://localhost:8000/employee").then((res) => {
@@ -49,9 +63,9 @@ const EmpListing = () => {
                                         <td>{item.phone}</td>
                                         <td>
 
-                                            <a className="btn btn-success">Edit</a>
-                                            <a className="btn btn-danger">Del</a>
-                                            <a className="btn btn-primary">Info</a>
+                                            <a className="btn btn-success" onClick={() => editDetails(item.id)}>Edit</a>
+                                            <a className="btn btn-danger" onClick={() => delDetails(item.id)}>Del</a>
+                                            <a className="btn btn-primary" onClick={() => loadDetails(item.id)}>Info</a>
 
                                         </td>
                                     </tr>

@@ -9,6 +9,7 @@ const EmpCreate = () => {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [isActive, setIsActive] = useState(true);
+    const [valid, setvalid] = useState(false);
 
     const navigate = useNavigate();
 
@@ -54,19 +55,25 @@ const EmpCreate = () => {
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         <label>NAME</label>
-                                        <input name={name} onChange= {e => setName(e.target.value)} className="form-control"></input>
+                                        <input required name={name} onMouseDown={e => setvalid(true)} onChange= {e => setName(e.target.value)} className="form-control"></input>
                                     </div>
+
+                                    {/* IF NAME LENGTH IS EQUAL TO 0, AND IF ONMOUSEDOWN/FOCUS ON INPUT IS TRUE THEN DISPLAY SPAN */}
+                                    {name.length == 0 && valid &&  <span className="text-danger">Please enter the name.</span>}
                                 </div>
+
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         <label>Email</label>
-                                        <input value={email} onChange= {e => setEmail(e.target.value)} className="form-control"></input>
+                                        <input required value={email}  onChange= {e => setEmail(e.target.value)} className="form-control"></input>
                                     </div>
+                                    {/* onMouseDown={e => setvalid(true)} */}
+                                    {/* {email.length == 0 && valid && <span className="text-danger"></span>} */}
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         <label>Phone</label>
-                                        <input value={phone} onChange= {e => setPhone(e.target.value)} className="form-control"></input>
+                                        <input required value={phone} onChange= {e => setPhone(e.target.value)} className="form-control"></input>
                                     </div>
                                 </div>
                                 <div className="col-lg-12">

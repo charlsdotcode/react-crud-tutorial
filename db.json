@@ -19,6 +19,20 @@
       "email": "ar.romero@gmail.com",
       "phone": "093456789012",
       "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Kervin",
+      "email": "Marasigan",
+      "phone": "094567890123",
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "name": "Thommy Jones",
+      "email": "tommy.jones@pepitomahfrend.cm",
+      "phone": "090912345678",
+      "isActive": true
     }
   ]
 }
