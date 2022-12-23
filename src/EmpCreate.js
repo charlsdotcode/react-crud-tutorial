@@ -1,4 +1,4 @@
-import { type } from "@testing-library/user-event/dist/type";
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -55,11 +55,11 @@ const EmpCreate = () => {
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         <label>NAME</label>
-                                        <input required name={name} onMouseDown={e => setvalid(true)} onChange= {e => setName(e.target.value)} className="form-control"></input>
+                                        <input required value={name} onMouseDown={e => setvalid(true)} onChange= {e => setName(e.target.value)} className="form-control"></input>
                                     </div>
 
                                     {/* IF NAME LENGTH IS EQUAL TO 0, AND IF ONMOUSEDOWN/FOCUS ON INPUT IS TRUE THEN DISPLAY SPAN */}
-                                    {name.length == 0 && valid &&  <span className="text-danger">Please enter the name.</span>}
+                                    {name.length === 0 && valid &&  <span className="text-danger">Please enter the name.</span>}
                                 </div>
 
                                 <div className="col-lg-12">

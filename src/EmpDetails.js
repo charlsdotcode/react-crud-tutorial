@@ -19,7 +19,7 @@ const EmpDetails = () => {
         }).catch((err) => {
             console.log(err.message())
         })
-    }, []);
+    });
 
     return (
         <>

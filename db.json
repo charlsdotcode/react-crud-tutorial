@@ -3,8 +3,9 @@
     {
       "id": 1,
       "name": "John Doe",
-      "email": "john.doe@gmail.com ",
-      "phone": "091234567890"
+      "email": "jd@gmail.com",
+      "phone": "09123456789",
+      "isActive": true
     },
     {
       "id": 2,
@@ -32,6 +33,13 @@
       "name": "Thommy Jones",
       "email": "tommy.jones@pepitomahfrend.cm",
       "phone": "090912345678",
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "name": "Charles Zard",
+      "email": "charlszard@dotcode.net",
+      "phone": "",
       "isActive": true
     }
   ]

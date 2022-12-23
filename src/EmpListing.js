@@ -7,16 +7,27 @@ const EmpListing = () => {
 
     const navigate = useNavigate();
 
-    const editDetails = (id) => {
-
+    const delDetails = (id, name) => {
+        if (window.confirm('Do you want to delete ' + name + '?')) {
+            fetch("http://localhost:8000/employee/" + id,
+                {
+                    method: "DELETE"
+                }
+            ).then((res) => {
+                alert('Removed Successfully!')
+                window.location.reload()
+            }).catch((err) => {
+                console.log(err.message())
+            })
+        }
     }
 
-    const delDetails = (id) => {
-
+    const editDetails = (id) => {
+        navigate("/employee/edit/" + id)
     }
 
     const loadDetails = (id) => {
-        navigate("/employee/details/"+id)
+        navigate("/employee/details/" + id)
     }
 
     useEffect(() => {
@@ -62,10 +73,10 @@ const EmpListing = () => {
                                         <td>{item.email}</td>
                                         <td>{item.phone}</td>
                                         <td>
-
-                                            <a className="btn btn-success" onClick={() => editDetails(item.id)}>Edit</a>
-                                            <a className="btn btn-danger" onClick={() => delDetails(item.id)}>Del</a>
-                                            <a className="btn btn-primary" onClick={() => loadDetails(item.id)}>Info</a>
+                                            {/* <a href={"/employee/edit/"+ item.id} className="btn btn-success">Edit</a> */}
+                                            <a href="# " className="btn btn-success" onClick={() => editDetails(item.id)}>Edit</a>
+                                            <a href="# " className="btn btn-danger" onClick={() => delDetails(item.id, item.name)}>Del</a>
+                                            <a href="# " className="btn btn-primary" onClick={() => loadDetails(item.id)}>Info</a>
 
                                         </td>
                                     </tr>
